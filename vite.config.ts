@@ -24,6 +24,12 @@ export default defineConfig({
             sizes: "144x144",
             type: "image/png",
             purpose: "any"
+          },
+          {
+            src: 'vite.svg',
+            sizes: "32x32",
+            type: "image/svg",
+            purpose: 'any'
           }
         ]
       },
