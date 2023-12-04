@@ -1,0 +1,14 @@
+FROM node:18-alpine
+
+WORKDIR /app/web-prast/
+
+COPY package*.json ./
+
+RUN mkdir -p ./node_modules
+RUN chown node:node ./node_modules
+RUN mkdir -p ./node_modules/.cache && chmod -R 777 ./node_modules/.cache
+
+RUN npm install
+
+COPY . ./
+CMD ["npm", "run", "dev"]
