@@ -12,24 +12,38 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        icons: [
+        "id": "/",
+        "dir": "ltr",
+        "lang": "en",
+        "name": "bwa-app",
+        "scope": "/",
+        "display": "standalone",
+        "start_url": "/",
+        "short_name": "bwa-app",
+        "theme_color": "#000000",
+        "description": "Teste PWA",
+        "orientation": "any",
+        "background_color": "#FFFFFF",
+        "related_applications": [],
+        "prefer_related_applications": false,
+        "display_override": [
+          "window-controls-overlay"
+        ],
+        "launch_handler": {
+          "client_mode": "navigate-existing"
+        },
+        "icons": [
           {
-            src: "/icons/512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable"
+            "src": "/icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
           },
           {
-            src: "/icons/144.png",
-            sizes: "144x144",
-            type: "image/png",
-            purpose: "any"
-          },
-          {
-            src: 'vite.svg',
-            sizes: "32x32",
-            type: "image/svg",
-            purpose: 'any'
+            "src": "/icons/144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
           }
         ]
       },
